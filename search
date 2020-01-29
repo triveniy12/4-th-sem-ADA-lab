@@ -1,0 +1,65 @@
+import java.io.*;
+import java.lang.*;
+import java.util.*;
+class search1 
+{
+	int a[]=new int[20];
+	int n,key,tc;
+	void getdata()
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the total number of elements:");
+		n=sc.nextInt();
+		System.out.println("Key to be searched:");
+		key=sc.nextInt();
+		System.out.println("Enter the elements of an array:");
+		for(int i=0;i<n;i++)
+		{
+			a[i]=sc.nextInt();
+		}
+		
+	}
+	int testcases()
+	{
+		Scanner s1=new Scanner(System.in);
+		System.out.println("Enter the number of  testcases:");
+		tc=s1.nextInt();
+		return tc;
+	}
+	void search()
+	{
+		for(int i=0;i<n;i++)
+		{
+			if(key==a[i])
+			{
+				System.out.println("1");
+			}
+			else
+			{
+				System.out.println("-1");
+			}
+		}
+	}
+}
+public class search
+{
+	public static void main(String[] args) 
+	{
+		int T;
+		search1 s=new search1();
+		T=s.testcases();
+		s.getdata();
+		while(T!=0)
+		{
+			for(int i=0;i<T;i++)
+			{
+				s.getdata();
+				s.search();
+			}
+			
+		}
+		
+		
+	}
+}
+
